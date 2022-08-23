@@ -1,0 +1,13 @@
+﻿@using EleWise.ELMA.BPM.Web.Security.Extensions
+@using EleWise.ELMA.BPM.Web.Security.Models
+@using EleWise.ELMA.Web.Mvc.Html
+@using EleWise.ELMA.UserAddInfo.Web.Models
+@model UserInfoModel
+
+<div class="user-profile-additionalinfo" style="margin-bottom: 10px;">
+    @Html.CollapsiblePanel().SaveState(false).Expanded(false).Class("separator-blue user-profile-separator").Header(SR.T("Дополнительная информация")).Content(
+        @<text>
+            Активных задач: @Model.TasksCount.
+        </text>
+    ).Render()
+</div>
